@@ -1,0 +1,62 @@
+:root {
+  --color-hype-bg-header: #3a546d;
+  --color-hype-bg-footer: #2c3e50;
+  --color-bg-white: #ffffff;
+  --color-bg-light-grey: #f7f7f7;
+  --color-bg-sidebar: #051e34;
+  --color-text-color: #000000;
+  --color-bg-btn-green: #198754;
+  --color-bg-btn-red: #dc3545;
+  --color-bg-btn-yellow: #ffc107;
+  --color-bg-tags: #f26551;
+  --color-bg-btn-blue: #165bba;
+  --color-bg-bell: #ff8f00;
+  --color-bg-i-top: #5b5858;
+  --color-bg-search: #e5e5e5;
+}
+
+.da-debug {
+  border: 1px solid red;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+nav {
+  height: 80px;
+}
+
+main {
+  padding-top: 80px;
+}
+
+#sidebar {
+  width: 150px;
+}
+
+#content {
+  width: calc(100% - 150px);
+}
+
+main .card {
+  margin-top: 2rem;
+}
+
+tr .sm {
+  width: 120px;
+  text-align: center;
+}
+
+.code {
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  line-height: 25px;
+  background-color: var(--color-bg-tags);
+}
+
+td {
+  text-align: center;
+}
+
+/* tabelle se dimensiono parti finali, il primo si prende lo spazio rimanente */
