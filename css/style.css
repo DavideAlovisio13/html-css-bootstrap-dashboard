@@ -38,10 +38,6 @@ main {
   width: calc(100% - 150px);
 }
 
-main .card {
-  margin-top: 2rem;
-}
-
 tr .sm {
   width: 120px;
   text-align: center;
@@ -60,7 +56,15 @@ td {
 }
 
 .cursor-pointer {
-    cursor: pointer;
+  cursor: pointer;
 }
 
+.bg-btn-nav-blue {
+  background-color: var(--color-bg-btn-blue);
+}
+
+.bg-sidebar {
+    background-color: var(--color-bg-sidebar);
+    background-image: url(../img/sidebar-bg.png);
+}
 /* tabelle se dimensiono parti finali, il primo si prende lo spazio rimanente */
