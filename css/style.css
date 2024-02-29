@@ -59,4 +59,8 @@ td {
   text-align: center;
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
 /* tabelle se dimensiono parti finali, il primo si prende lo spazio rimanente */
