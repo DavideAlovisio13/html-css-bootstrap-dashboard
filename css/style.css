@@ -1,3 +1,4 @@
+/* general */
 :root {
   --color-hype-bg-header: #3a546d;
   --color-hype-bg-footer: #2c3e50;
@@ -15,26 +16,37 @@
   --color-bg-search: #e5e5e5;
 }
 
-.da-debug {
-  border: 1px solid red;
-}
-
 body {
   font-family: "Roboto", sans-serif;
 }
+
+/* nav */
 .fixed-top {
   height: 80px;
   background-color: var(--color-bg-light-grey);
 }
+#logomobile {
+  width: 30px;
+  height: 30px;
+}
 
+.navbar-nav .dropdown-menu {
+  position: absolute;
+  z-index: 1040;
+  left: -130px;
+  top: 30px;
+}
+
+/* main */
 main {
   padding-top: 80px;
 }
 
-#sidebar {
-  width: 200px;
+.offcanvas.offcanvas-end {
+  width: 700px;
 }
 
+/* card-table */
 tr .sm {
   width: 100px;
   text-align: center;
@@ -52,17 +64,22 @@ td {
   text-align: center;
 }
 
-.cursor-pointer {
-  cursor: pointer;
-}
-
-.bg-btn-nav-blue {
-  background-color: var(--color-bg-btn-blue);
+/* sidebar-left */
+#sidebar {
+  width: 200px;
 }
 
 .bg-sidebar {
   background-color: var(--color-bg-sidebar);
   background-image: url(../img/sidebar-bg.png);
+}
+
+/* utility */
+.bg-btn-nav-blue {
+  background-color: var(--color-bg-btn-blue);
+}
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .row,
@@ -75,26 +92,13 @@ td {
   font-size: 1em;
 }
 
-#logomobile {
-  width: 30px;
-  height: 30px;
-}
-
-.navbar-nav .dropdown-menu {
-  position: absolute;
-  z-index: 1040;
-  left: -130px;
-  top: 30px;
-}
 .accordion-button collapsed {
   font-size: 0.8em;
 }
 
-.offcanvas.offcanvas-end  {
-  width: 700px;
-}
+/* MEDIA QUERY TO FIX TABLE */
 
-
+/* max-width: 992PX */
 @media screen and (max-width: 992px) {
   .date-start,
   .roi {
