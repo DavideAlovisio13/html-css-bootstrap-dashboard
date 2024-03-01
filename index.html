@@ -27,11 +27,20 @@
     <div id="sidebar" class="h-100 py-5 p-3 bg-sidebar">
       <div class="d-flex flex-column justify-content-between text-light">
         <ul class="list-unstyled">
-          <li><i class="fa-solid fa-house"></i> Home
+          <li>
+            <button type="button" class="btn btn-outline-light border-0 rounded-0 m-1 ">
+              <i class=" fa-solid fa-house"></i> Home
+            </button>
           </li>
-          <li><i class="fa-solid fa-chart-simple"></i> Sats
+          <li>
+            <button type="button" class="btn btn-outline-light border-0 rounded-0 m-1 ">
+              <i class=" fa-solid fa-chart-simple"></i> Stats
+            </button>
           </li>
-          <li><i class="fa-solid fa-chart-simple"></i> Signal
+          <li>
+            <button type="button" class="btn btn-outline-light border-0 rounded-0 m-1 ">
+              <i class=" fa-solid fa-signal"></i> Signal
+            </button>
           </li>
         </ul>
         <div></div>
@@ -43,7 +52,7 @@
       <div class="bg-primary" id="main-toolbar">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-4">
+            <div class="col-12 col-md-4 order-1 order-md-0 ">
               <div class="card bg-primary border-0">
                 <div class="card-body text-light">
                   <h2 class="card-title text-light d-inline-block">Boolean</h2>
@@ -58,17 +67,17 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-md-4 order-2 order-md-0">
               <div class="card bg-primary border-0">
-                <div class="card-body text-light text-center">
+                <div class="card-body text-light">
                   <h5 class="card-title">Studenti online negli ultimi 30 minuti</h5>
                   <h2>125</h2>
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-md-4 order-0 order-md-0">
               <div class="card bg-primary border-0">
-                <div class="card-body text-light text-end">
+                <div class="card-body text-light text-md-end">
                   <h5 class="card-title d-inline-block">Nuovo studente</h5>
                   <span>
                     <button type="button" class="btn btn-outline-light"><i class="fa-solid fa-plus"></i>
@@ -239,7 +248,7 @@
                   <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="accordion-item">
                       <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        <button id="acc-btn" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                           data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                           Come aggiungerw un nuovo studente?
                         </button>
@@ -253,7 +262,7 @@
                     </div>
                     <div class="accordion-item">
                       <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        <button id="acc-btn" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                           data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                           Come posso accedere alle informazioni del mio account?
                         </button>
@@ -267,7 +276,7 @@
                     </div>
                     <div class="accordion-item">
                       <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        <button id="acc-btn" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                           data-bs-target="#flush-collapseThree" aria-expanded="false"
                           aria-controls="flush-collapseThree">
                           Posso usare questa dashboard da mobile?

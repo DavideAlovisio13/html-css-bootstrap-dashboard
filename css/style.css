@@ -34,10 +34,6 @@ main {
   width: 150px;
 }
 
-#content {
-  width: calc(100% - 150px);
-}
-
 tr .sm {
   width: 120px;
   text-align: center;
@@ -64,7 +60,12 @@ td {
 }
 
 .bg-sidebar {
-    background-color: var(--color-bg-sidebar);
-    background-image: url(../img/sidebar-bg.png);
+  background-color: var(--color-bg-sidebar);
+  background-image: url(../img/sidebar-bg.png);
 }
+
+.row {
+  font-size: 0.8em;
+}
+
 /* tabelle se dimensiono parti finali, il primo si prende lo spazio rimanente */
