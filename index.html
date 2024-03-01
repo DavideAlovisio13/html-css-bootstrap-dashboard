@@ -20,30 +20,75 @@
 
 <body>
   <!-- nav -->
-  <nav class="fixed-top bg-danger"></nav>
+  <div class="fixed-top w-100 d-flex shadow-sm">
+    <nav class="navbar navbar-light my-auto w-100">
+      <div class="container-fluid bg-white my-auto py-2">
+        <a class="navbar-brand" href="#">
+          <img class="d-none d-md-inline-block" id="logo" src="./img/logo.svg" alt="logo">
+          <img class="d-md-none" id="logomobile" src="./img/mobile-logo.png " alt="mobile logo">
+        </a>
+        <div class="input-group flex-grow-1 w-auto">
+          <span class="input-group-text border-end-0" id="basic-addon1"><i class="fa fa-search"
+              aria-hidden="true"></i></span>
+          <input type="text" class="form-control bg-body-tertiary border-start-0" name="Search" placeholder="Search"
+            aria-label="Search" aria-describedby="basic-addon1">
+        </div>
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item">
+            <a class="nav-link ps-4" aria-current="page" href="#"><i class="fa-solid fa-list"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ps-4 d-none d-md-inline-block" href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ps-4 d-none d-md-inline-block " href="#"><i class="fa-solid fa-circle-question"></i>
+            </a>
+          </li>
+          <li class="nav-item dropdown d-none d-md-inline-block">
+            <a class="nav-link ps-4" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa-solid fa-bell"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Profilo</a></li>
+              <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
   <!-- mian -->
   <main class="vh-100 d-flex">
     <!-- sidebar-left -->
-    <div id="sidebar" class="h-100 py-5 p-3 bg-sidebar">
-      <div class="d-flex flex-column justify-content-between text-light">
+    <div id="sidebar" class="h-100 py-4 bg-sidebar d-flex flex-column justify-content-between ">
+      <div class=" text-light">
         <ul class="list-unstyled">
-          <li>
-            <button type="button" class="btn btn-outline-light border-0 rounded-0 mb-1 ">
-              <i class=" fa-solid fa-house"></i> Home
+          <li class="text-md-center ">
+            <button type="button" class="btn btn-outline-light border-0 rounded-0 mb-1 d-block mx-auto mx-lg-0">
+              <i class=" fa-solid fa-house"></i> <span class="d-none d-lg-inline-block ">Home</span>
             </button>
           </li>
-          <li>
-            <button type="button" class="btn btn-outline-light border-0 rounded-0 mb-1 ">
-              <i class=" fa-solid fa-chart-simple"></i> Stats
+          <li class="text-md-center">
+            <button type=" button" class="btn btn-outline-light border-0 rounded-0 mb-1 d-block mx-auto mx-lg-0">
+              <i class=" fa-solid fa-chart-simple"></i> <span class="d-none d-lg-inline-block ">Stats</span>
             </button>
           </li>
-          <li>
-            <button type="button" class="btn btn-outline-light border-0 rounded-0 mb-1 ">
-              <i class=" fa-solid fa-signal"></i> Signal
+          <li class="text-md-center">
+            <button type=" button" class="btn btn-outline-light border-0 rounded-0 mb-1 d-block mx-auto mx-lg-0">
+              <i class=" fa-solid fa-signal"></i> <span class="d-none d-lg-inline-block ">Signal</span>
             </button>
           </li>
         </ul>
-        <div></div>
+      </div>
+      <div class=" text-light">
+        <ul class="list-unstyled">
+          <li class="text-md-center">
+            <button type=" button" class="btn btn-outline-light border-0 rounded-0 mb-1 d-block mx-auto mx-lg-0">
+              <i class=" fa-solid fa-gear"></i> <span class="d-none d-lg-inline-block ">Admin</span>
+            </button>
+        </ul>
       </div>
     </div>
     <!-- scrollable-content -->
@@ -60,9 +105,10 @@
                   <div>
                     <span class="badge rounded-pill bg-btn-nav-blue ">3 app</span>
                     <span><i class="fa-solid fa-angles-right"></i></span>
-                    <span class="badge rounded-pill bg-btn-nav-blue ">Boolean mobile app</span>
-                    <span class="badge rounded-pill bg-btn-nav-blue ">Boolean web app</span>
-                    <span class="badge rounded-pill bg-btn-nav-blue ">Boolean blog app</span>
+                    <span class="badge rounded-pill bg-btn-nav-blue d-md-none">+</span>
+                    <span class="badge rounded-pill bg-btn-nav-blue d-none d-md-inline-block">Boolean mobile app</span>
+                    <span class="badge rounded-pill bg-btn-nav-blue d-none d-md-inline-block">Boolean web app</span>
+                    <span class="badge rounded-pill bg-btn-nav-blue d-none d-md-inline-block ">Boolean blog app</span>
                   </div>
                 </div>
               </div>
@@ -79,9 +125,73 @@
               <div class="card bg-primary border-0">
                 <div class="card-body text-light text-md-end">
                   <h5 class="card-title d-inline-block">Nuovo studente</h5>
-                  <span>
-                    <button type="button" class="btn btn-outline-light"><i class="fa-solid fa-plus"></i>
-                    </button>
+                  <span class="d-inline-block">
+                    <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                      <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel">Inserisci un nuovo studente</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body container-fluid text-start fs-5">
+                        <div class="row g-3">
+                          <div class="col">
+                            <label for="inputEmail4" class="form-label">Nome</label>
+                            <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                          </div>
+                          <div class="col">
+                            <label for="inputEmail4" class="form-label">Cognome</label>
+                            <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                          </div>
+                        </div>
+                        <form class="row g-3">
+                          <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Email</label>
+                            <div class="input-group">
+                              <div class="input-group-text">@</div>
+                              <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Username">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="inputPassword4">
+                          </div>
+                          <div class="col-12">
+                            <label for="inputAddress" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                          </div>
+                          <div class="col-12">
+                            <label for="inputAddress2" class="form-label">Address 2</label>
+                            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputCity" class="form-label">City</label>
+                            <input type="text" class="form-control" id="inputCity">
+                          </div>
+                          <div class="col-md-4">
+                            <label for="inputState" class="form-label">State</label>
+                            <select id="inputState" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+                          <div class="col-md-2">
+                            <label for="inputZip" class="form-label">Zip</label>
+                            <input type="text" class="form-control" id="inputZip">
+                          </div>
+                          <div class="col-12">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="gridCheck">
+                              <label class="form-check-label" for="gridCheck">
+                                Check me out
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
                   </span>
                 </div>
               </div>
@@ -98,12 +208,12 @@
               <div class="card mt-4">
                 <div class="card-header fw-bold fs-6 p-3">Prossime classi</div>
                 <div class="card-body">
-                  <table class="table ">
+                  <table class="table">
                     <thead>
                       <tr>
                         <th scope="col">Nome</th>
-                        <th class="sm" scope="col">Data inizio</th>
-                        <th class="sm text-uppercase" scope="col">roi</th>
+                        <th class="sm date-start" scope="col">Data inizio</th>
+                        <th class="sm text-uppercase roi" scope="col">roi</th>
                         <th class="sm" scope="col">Stato</th>
                         <th class="sm" scope="col">Azioni</th>
                       </tr>
@@ -115,9 +225,9 @@
                           </div>
                           <span>Classe 75</span>
                         </th>
-                        <td>15 Feb 2021</td>
-                        <td>20%</td>
-                        <td>Done</td>
+                        <td class="date-start">15 Feb 2021</td>
+                        <td class="roi">20%</td>
+                        <td><span class="badge bg-success">Done</span></td>
                         <td>
                           <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i>
                           </button>
@@ -131,9 +241,9 @@
                           </div>
                           <span>Classe 76</span>
                         </th>
-                        <td>16 Feb 2021</td>
-                        <td>20%</td>
-                        <td>Done</td>
+                        <td class="date-start">16 Feb 2021</td>
+                        <td class="roi">20%</td>
+                        <td><span class="badge bg-success">Done</span></td>
                         <td>
                           <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i>
                           </button>
@@ -147,9 +257,9 @@
                           </div>
                           <span>Classe 77</span>
                         </th>
-                        <td>17 Feb 2021</td>
-                        <td>20%</td>
-                        <td>process</td>
+                        <td class="date-start">17 Feb 2021</td>
+                        <td class="roi">20%</td>
+                        <td><span class="badge bg-warning text-light">process</span></td>
                         <td>
                           <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i>
                           </button>
@@ -163,9 +273,9 @@
                           </div>
                           <span>Classe 78</span>
                         </th>
-                        <td>18 Feb 2021</td>
-                        <td>20%</td>
-                        <td>Done</td>
+                        <td class="date-start">18 Feb 2021</td>
+                        <td class="roi">20%</td>
+                        <td><span class="badge bg-success">Done</span></td>
                         <td>
                           <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i>
                           </button>
@@ -179,9 +289,9 @@
                           </div>
                           <span>Classe 79</span>
                         </th>
-                        <td>19 Feb 2021</td>
-                        <td>20%</td>
-                        <td>failed</td>
+                        <td class="date-start">19 Feb 2021</td>
+                        <td class="roi">20%</td>
+                        <td><span class="badge bg-danger">failed</span></td>
                         <td>
                           <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i>
                           </button>
@@ -195,9 +305,9 @@
                           </div>
                           <span>Classe 80</span>
                         </th>
-                        <td>20 Feb 2021</td>
-                        <td>20%</td>
-                        <td>Done</td>
+                        <td class="date-start">20 Feb 2021</td>
+                        <td class="roi">20%</td>
+                        <td><span class="badge bg-success">Done</span></td>
                         <td>
                           <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i>
                           </button>
@@ -211,9 +321,9 @@
                           </div>
                           <span>Classe 81</span>
                         </th>
-                        <td>21 Feb 2021</td>
-                        <td>20%</td>
-                        <td>failed</td>
+                        <td class="date-start">21 Feb 2021</td>
+                        <td class="roi">20%</td>
+                        <td><span class="badge bg-danger">failed</span></td>
                         <td>
                           <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i>
                           </button>
@@ -227,9 +337,9 @@
                           </div>
                           <span>Classe 82</span>
                         </th>
-                        <td>22 Feb 2021</td>
-                        <td>20%</td>
-                        <td>Done</td>
+                        <td class="date-start">22 Feb 2021</td>
+                        <td class="roi">20%</td>
+                        <td><span class="badge bg-success">Done</span></td>
                         <td>
                           <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i>
                           </button>
@@ -248,7 +358,7 @@
                   <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="accordion-item">
                       <h2 class="accordion-header">
-                        <button id="acc-btn" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        <button id="acc-btn " class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                           data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                           Come aggiungere un nuovo studente?
                         </button>
@@ -285,7 +395,6 @@
                       <div id="flush-collapseThree" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-
                         </div>
                       </div>
                     </div>

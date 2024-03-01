@@ -2,7 +2,7 @@
   --color-hype-bg-header: #3a546d;
   --color-hype-bg-footer: #2c3e50;
   --color-bg-white: #ffffff;
-  --color-bg-light-grey: #f7f7f7;
+  --color-bg-light-grey: #f8f9fa;
   --color-bg-sidebar: #051e34;
   --color-text-color: #000000;
   --color-bg-btn-green: #198754;
@@ -22,8 +22,9 @@
 body {
   font-family: "Roboto", sans-serif;
 }
-nav {
+.fixed-top {
   height: 80px;
+  background-color: var(--color-bg-light-grey);
 }
 
 main {
@@ -35,7 +36,7 @@ main {
 }
 
 tr .sm {
-  width: 120px;
+  width: 100px;
   text-align: center;
 }
 
@@ -64,7 +65,8 @@ td {
   background-image: url(../img/sidebar-bg.png);
 }
 
-.row {
+.row,
+#sidebar {
   font-size: 0.8em;
 }
 
@@ -73,4 +75,30 @@ td {
   font-size: 1em;
 }
 
+#logomobile {
+  width: 30px;
+  height: 30px;
+}
+
+.navbar-nav .dropdown-menu {
+  position: absolute;
+  z-index: 1040;
+  left: -130px;
+  top: 30px;
+}
+.accordion-button collapsed {
+  font-size: 0.8em;
+}
+
+.offcanvas.offcanvas-end  {
+  width: 700px;
+}
+
+
+@media screen and (max-width: 992px) {
+  .date-start,
+  .roi {
+    display: none;
+  }
+}
 /* tabelle se dimensiono parti finali, il primo si prende lo spazio rimanente */
