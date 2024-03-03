@@ -105,4 +105,29 @@ td {
     display: none;
   }
 }
-/* tabelle se dimensiono parti finali, il primo si prende lo spazio rimanente */
+
+@media  screen and (max-width: 768px)  {
+
+  .animation {
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+
+  animation-name: appear;
+    animation-range-end: contain 50%;
+    animation-fill-mode: both;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+  }
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    to {
+      opacity: 1,
+      transform: scaleX(1);
+    }
+  }
+
+}
